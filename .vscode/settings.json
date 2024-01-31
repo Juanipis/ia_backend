@@ -2,4 +2,7 @@
   "python.testing.unittestEnabled": false, 
   "python.testing.pytestEnabled": false,
   "pythonTestExplorer.testFramework": "unittest",
+  "cSpell.words": [
+    "fastapi"
+  ],
 }
