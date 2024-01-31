@@ -1,0 +1,32 @@
+{
+  "name": "ia_backend_container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
+  "forwardPorts": [8000],
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-contrib/features/pipenv:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "littlefoxteam.vscode-python-test-adapter",
+        "christian-kohler.path-intellisense",
+        "SonarSource.sonarlint-vscode"
+      ],
+      "settings": {
+        "sonarlint.ls.javaHome":"/usr/local/sdkman/candidates/java/17.0.10-ms"
+      }
+    }
+
+    
+  },
+  "postCreateCommand": "./scripts/devcontainer-post-create.sh",
+  "remoteUser": "root"
+}
