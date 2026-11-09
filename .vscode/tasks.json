@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Build Docker Image for IA Backend",
+          "type": "shell",
+          "command": "docker build -t ia_backend .",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "presentation": {
+              "echo": true,
+              "reveal": "always",
+              "focus": false,
+              "panel": "shared",
+              "showReuseMessage": true,
+              "clear": false
+          },
+          "problemMatcher": []
+      },
+      {
+        "label": "Run Docker Container for IA Backend",
+        "type": "shell",
+        "command": "docker run -d -p 80:80 --name ia_backend_container ia_backend",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "shared",
+            "showReuseMessage": true,
+            "clear": false
+        },
+        "problemMatcher": []
+    }
+  ]
+}
